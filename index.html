@@ -1,182 +1,163 @@
 
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Perpustakaan Digital</title>
 </head>
 <body>
 
-    <h1>Perpustakaan Digital</h1>
-    <p>Selamat datang di website Perpustakaan Digital.</p>
+<center>
+    <h1>PERPUSTAKAAN DIGITAL</h1>
+    <p>Selamat Datang di Website Perpustakaan Digital</p>
 
-    <h2>Menu Navigasi</h2>
+    <hr>
+
+    <h2>Menu</h2>
     <a href="#katalog">Katalog Buku</a> |
-    <a href="#pendaftaran">Pendaftaran Anggota</a> |
+    <a href="#anggota">Pendaftaran Anggota</a> |
     <a href="#peminjaman">Peminjaman Buku</a> |
-    <a href="#layanan">Layanan</a> |
     <a href="#kontak">Kontak</a>
 
     <hr>
 
-    <h2 id="katalog">Katalog Koleksi Buku</h2>
+    <h2>Gambar Perpustakaan</h2>
+    <img src="perpustakaan.jpg" width="400" alt="Gambar Perpustakaan">
 
-    <table border="1" cellpadding="5">
+    <h2>Video Perpustakaan</h2>
+    <video width="400" controls>
+        <source src="tutorial.mp4" type="video/mp4">
+        Browser Anda tidak mendukung video.
+    </video>
+
+    <hr>
+
+    <h2 id="katalog">Katalog Buku</h2>
+    <table border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Judul Buku</th>
             <th>Penulis</th>
             <th>Tahun</th>
-            <th>Kategori</th>
+            <th>Status</th>
         </tr>
         <tr>
             <td>1</td>
             <td>Pemrograman Web</td>
-            <td>Abdul Kadir</td>
-            <td>2022</td>
-            <td>Teknologi</td>
+            <td>Andi</td>
+            <td>2024</td>
+            <td>Tersedia</td>
         </tr>
         <tr>
             <td>2</td>
-            <td>Dasar-Dasar Database</td>
-            <td>Budi Raharjo</td>
-            <td>2021</td>
-            <td>Komputer</td>
+            <td>Basis Data</td>
+            <td>Budi</td>
+            <td>2023</td>
+            <td>Dipinjam</td>
         </tr>
         <tr>
             <td>3</td>
-            <td>Laskar Pelangi</td>
-            <td>Andrea Hirata</td>
-            <td>2005</td>
-            <td>Novel</td>
-        </tr>
-        <tr>
-            <td>4</td>
             <td>Algoritma dan Pemrograman</td>
-            <td>Rinaldi Munir</td>
-            <td>2016</td>
-            <td>Pendidikan</td>
+            <td>Citra</td>
+            <td>2022</td>
+            <td>Tersedia</td>
         </tr>
     </table>
 
-    <h2>Gambar Perpustakaan</h2>
-    <img src="perpustakaan.jpg"
-         alt="Gambar Perpustakaan"
-         width="500">
+    <hr>
 
-    <h2 id="pendaftaran">Form Pendaftaran Anggota</h2>
-
+    <h2 id="anggota">Form Pendaftaran Anggota</h2>
     <form>
-        <label>Nama Lengkap:</label><br>
-        <input type="text" name="nama" required><br><br>
+        <p>Nama Lengkap:
+            <input type="text" name="nama">
+        </p>
 
-        <label>NIM/NIS:</label><br>
-        <input type="text" name="identitas" required><br><br>
+        <p>Email:
+            <input type="email" name="email">
+        </p>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+        <p>Password:
+            <input type="password" name="password">
+        </p>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+        <p>Tanggal Lahir:
+            <input type="date" name="tanggal">
+        </p>
 
-        <label>Tanggal Lahir:</label><br>
-        <input type="date" name="tanggal_lahir"><br><br>
+        <p>Jenis Kelamin:
+            <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+            <input type="radio" name="jk" value="Perempuan"> Perempuan
+        </p>
 
-        <label>Jenis Kelamin:</label><br>
-        <input type="radio" name="jk" value="Laki-laki">
-        Laki-laki
-        <input type="radio" name="jk" value="Perempuan">
-        Perempuan<br><br>
+        <p>Alamat:</p>
+        <textarea name="alamat" rows="4" cols="30"></textarea>
 
-        <label>Nomor Telepon:</label><br>
-        <input type="tel" name="telepon"><br><br>
-
-        <input type="checkbox" name="persetujuan" required>
-        Saya menyetujui pendaftaran anggota.<br><br>
-
-        <input type="submit" value="Daftar">
-        <input type="reset" value="Reset">
+        <p>
+            <input type="submit" value="Daftar">
+            <input type="reset" value="Hapus">
+        </p>
     </form>
+
+    <hr>
 
     <h2 id="peminjaman">Form Peminjaman Buku</h2>
-
     <form>
-        <label>Nama Anggota:</label><br>
-        <input type="text" name="nama_anggota" required><br><br>
+        <p>Nama Anggota:
+            <input type="text" name="nama_anggota">
+        </p>
 
-        <label>Pilih Buku:</label><br>
-        <select name="buku" required>
-            <option value="">-- Pilih Buku --</option>
-            <option>Pemrograman Web</option>
-            <option>Dasar-Dasar Database</option>
-            <option>Laskar Pelangi</option>
-            <option>Algoritma dan Pemrograman</option>
-        </select><br><br>
+        <p>Judul Buku:
+            <select name="judul_buku">
+                <option value="Pemrograman Web">Pemrograman Web</option>
+                <option value="Basis Data">Basis Data</option>
+                <option value="Algoritma dan Pemrograman">Algoritma dan Pemrograman</option>
+            </select>
+        </p>
 
-        <label>Tanggal Peminjaman:</label><br>
-        <input type="date" name="tanggal_pinjam" required><br><br>
+        <p>Tanggal Peminjaman:
+            <input type="date" name="tanggal_pinjam">
+        </p>
 
-        <label>Tanggal Pengembalian:</label><br>
-        <input type="date" name="tanggal_kembali" required><br><br>
+        <p>Tanggal Pengembalian:
+            <input type="date" name="tanggal_kembali">
+        </p>
 
-        <label>Jumlah Buku:</label><br>
-        <input type="number" name="jumlah"
-               min="1" max="3" required><br><br>
-
-        <label>Catatan:</label><br>
-        <textarea name="catatan" rows="4" cols="30"></textarea><br><br>
-
-        <input type="submit" value="Ajukan Peminjaman">
-        <input type="reset" value="Reset">
+        <p>
+            <input type="submit" value="Pinjam Buku">
+            <input type="reset" value="Hapus">
+        </p>
     </form>
+
+    <hr>
 
     <h2>Prosedur Peminjaman Buku</h2>
     <ol>
         <li>Daftar sebagai anggota perpustakaan.</li>
-        <li>Pilih buku yang tersedia pada katalog.</li>
-        <li>Isi formulir peminjaman dengan lengkap.</li>
-        <li>Kirim formulir peminjaman.</li>
-        <li>Tunggu konfirmasi dari petugas perpustakaan.</li>
+        <li>Pilih buku yang ingin dipinjam.</li>
+        <li>Isi formulir peminjaman buku.</li>
+        <li>Tunggu konfirmasi petugas perpustakaan.</li>
         <li>Kembalikan buku sesuai tanggal yang ditentukan.</li>
     </ol>
 
-    <h2>Video Tutorial Peminjaman</h2>
-    <video width="500" controls>
-        <source src="tutorial.mp4" type="video/mp4">
-        Browser Anda tidak mendukung video.
-    </video>
+    <hr>
 
-    <h2 id="layanan">Layanan Perpustakaan</h2>
-    <ul>
-        <li>Peminjaman dan pengembalian buku</li>
-        <li>Pendaftaran anggota</li>
-        <li>Pencarian koleksi buku</li>
-        <li>Akses referensi digital</li>
-    </ul>
-
+    <h2>Link Perpustakaan Lain</h2>
     <p>
-        <a href="https://www.perpusnas.go.id/" target="_blank">
-            Kunjungi Perpustakaan Nasional
-        </a>
+        <a href="https://www.perpusnas.go.id/" target="_blank">Perpustakaan Nasional</a>
     </p>
-
     <p>
-        <a href="https://onesearch.id/" target="_blank">
-            Cari Buku di Indonesia OneSearch
-        </a>
+        <a href="https://onesearch.id/" target="_blank">Indonesia OneSearch</a>
     </p>
-
-    <h2 id="kontak">Kontak Perpustakaan</h2>
-    <p>Email: perpustakaan@example.com</p>
-    <p>Telepon: 021-12345678</p>
-
-    <a href="https://mail.google.com/" target="_blank">
-        Hubungi melalui Gmail
-    </a>
 
     <hr>
+
+    <h2 id="kontak">Kontak</h2>
+    <p>Email: perpustakaan@gmail.com</p>
+    <p>Telepon: 081234567890</p>
+
+    <hr>
+
     <p>&copy; 2026 Perpustakaan Digital</p>
+</center>
 
 </body>
-      </html>
-      
+</html>
